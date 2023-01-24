@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   int n,m,p,k,i,j;
+   cin>>n>>m;
+   int count1=0,count2=0,count3=0;
+   if(n<10){
+       if(m>=1500){
+           count1++;
+       }
+   }
+   else{
+       p = n/10;
+       k = n%10;
+       if(k>=5){
+           count3 = count3+p;
+            i = k/5;
+            j = k%5;
+           if(j>=4){
+               count2 = count2+i;
+           }
+           int r = j/4;
+           int q = j%4;
+           count1 = count1+r;
+       }
+       else{
+           i = n/5;
+           j = n%5;
+           count1 = count1+p;
+       }
+    }
+   cout<<"T "<<": "<<count1<<" "<<"P "<<": "<<count2<<" "<<"C "<<": "<<count3;
+}
